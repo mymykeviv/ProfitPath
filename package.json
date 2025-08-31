@@ -1,0 +1,104 @@
+{
+  "name": "profitpath",
+  "version": "1.0.0",
+  "description": "Desktop application for small manufacturing firms to manage products, purchases, sales, inventory, and GST-compliant invoicing",
+  "main": "electron/main.js",
+  "homepage": "./",
+  "private": true,
+  "scripts": {
+    "start": "./scripts/start-dev.sh",
+    "start:dev": "./scripts/start-dev.sh",
+    "start:prod": "./scripts/start-prod.sh",
+    "stop:dev": "./scripts/stop-dev.sh",
+    "stop:prod": "./scripts/stop-prod.sh",
+    "frontend:start": "cd app && npm start",
+    "frontend:build": "cd app && npm run build",
+    "frontend:test": "cd app && npm test",
+    "backend:start": "cd backend && npm start",
+    "backend:dev": "cd backend && npx nodemon index.js",
+    "backend:test": "cd backend && npm test",
+    "electron:dev": "electron .",
+    "electron:pack": "electron-builder",
+    "electron:dist": "npm run frontend:build && electron-builder",
+    "install:all": "npm install && cd app && npm install && cd ../backend && npm install",
+    "test": "npm run frontend:test && npm run backend:test",
+    "lint": "cd app && npm run lint && cd ../backend && npm run lint",
+    "format": "cd app && npm run format && cd ../backend && npm run format",
+    "build": "npm run frontend:build",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "keywords": [
+    "manufacturing",
+    "inventory",
+    "gst",
+    "invoicing",
+    "accounting",
+    "desktop",
+    "electron"
+  ],
+  "author": "ProfitPath Team",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.1",
+    "concurrently": "^8.2.2",
+    "wait-on": "^7.2.0",
+    "cross-env": "^7.0.3",
+    "nodemon": "^3.0.2"
+  },
+  "dependencies": {
+    "electron-is-dev": "^2.0.0",
+    "electron-window-state": "^5.0.3"
+  },
+  "build": {
+    "appId": "com.profitpath.app",
+    "productName": "ProfitPath",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "app/build/**/*",
+      "backend/**/*",
+      "electron/**/*",
+      "node_modules/**/*",
+      "package.json"
+    ],
+    "mac": {
+      "category": "public.app-category.business",
+      "target": [
+        {
+          "target": "dmg",
+          "arch": [
+            "x64",
+            "arm64"
+          ]
+        }
+      ]
+    },
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        }
+      ]
+    },
+    "linux": {
+      "target": [
+        {
+          "target": "AppImage",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    }
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  }
+}

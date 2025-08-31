@@ -1,0 +1,101 @@
+---
+description: Project Script Usage Enforcement
+alwaysApply: true
+---
+
+# ProfitPath Project Script Usage Rules
+
+You are working on the ProfitPath manufacturing management application. This project has specific script-based workflows that MUST be followed.
+
+## 🔹 Script Usage Requirements
+
+**ALWAYS use the provided scripts instead of manual commands:**
+
+### Development Environment
+- **Start Development:** Use `npm run start:dev` or `./scripts/start-dev.sh`
+- **Stop Development:** Use `npm run stop:dev` or `./scripts/stop-dev.sh`
+- **Never use:** Manual `npm start`, `nodemon`, or direct `node` commands
+
+### Production Environment
+- **Start Production:** Use `npm run start:prod` or `./scripts/start-prod.sh`
+- **Stop Production:** Use `npm run stop:prod` or `./scripts/stop-prod.sh`
+- **Never use:** Manual `electron .` or direct production commands
+
+### Installation and Setup
+- **Install All Dependencies:** Use `npm run install:all`
+- **Build Application:** Use `npm run build`
+- **Run Tests:** Use `npm test` or specific test commands
+
+## 🔹 Architecture Compliance
+
+**The ProfitPath application follows this architecture:**
+- **Frontend:** React application in `/app` directory (port 3000)
+- **Backend:** Node.js Express server in `/backend` directory (port 3001)
+- **Desktop:** Electron wrapper in `/electron` directory
+- **Database:** SQLite embedded database
+- **Scripts:** All automation in `/scripts` directory
+
+## 🔹 Development Workflow
+
+1. **Starting Development:**
+   ```bash
+   npm run start:dev
+   ```
+   This automatically:
+   - Installs missing dependencies
+   - Creates necessary directories
+   - Starts backend server on port 3001
+   - Starts React frontend on port 3000
+   - Provides proper cleanup on exit
+
+2. **Stopping Development:**
+   ```bash
+   npm run stop:dev
+   ```
+   This safely:
+   - Terminates all related processes
+   - Cleans up orphaned processes
+   - Frees up development ports
+
+3. **Production Deployment:**
+   ```bash
+   npm run start:prod
+   ```
+   This:
+   - Builds frontend if needed
+   - Starts Electron desktop application
+   - Runs in production mode
+
+## 🔹 Enforcement Rules
+
+**When providing instructions or recommendations:**
+- ALWAYS reference the appropriate npm script or shell script
+- NEVER suggest manual command alternatives
+- If a user asks about manual commands, redirect them to use scripts
+- Explain the benefits of using the standardized scripts
+
+**Benefits of using scripts:**
+- Consistent environment setup across different machines
+- Automatic dependency management
+- Proper process cleanup and error handling
+- Cross-platform compatibility (Windows, macOS, Linux)
+- Integrated logging and status reporting
+
+## 🔹 Script Locations
+
+- `/scripts/start-dev.sh` - Development environment startup
+- `/scripts/stop-dev.sh` - Development environment shutdown
+- `/scripts/start-prod.sh` - Production application startup
+- `/scripts/stop-prod.sh` - Production application shutdown
+- `/package.json` - NPM script definitions and shortcuts
+
+## 🔹 Error Handling
+
+If scripts fail:
+1. Check Node.js and npm installation (requires Node 16+)
+2. Verify all dependencies are installed (`npm run install:all`)
+3. Check for port conflicts (3000, 3001)
+4. Review script output for specific error messages
+5. Use stop scripts to clean up before retrying
+
+**Remember: Scripts are the single source of truth for application lifecycle management in ProfitPath.**
