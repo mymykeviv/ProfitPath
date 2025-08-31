@@ -59,13 +59,19 @@
 
 ***
 
-### Next Step: High-Fidelity Mockups to Deliver
+### High-Fidelity Mockups to Deliver
 
-1. Product & Item Management screen (catalog, add/edit forms)  
-2. Purchase Order Entry and Management screen  
-3. Sales Invoice Creation and Management screen  
-4. Inventory Dashboard with stock levels and reorder alerts  
-5. Payment Tracking interface  
-6. Expense Logging and Reporting screen
+1. Product & Item Management screen (catalog, add/edit forms)  - <img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/f72596d1-06c3-4a09-8c2e-6bf0b02bf100" />
+
+2. Purchase Order Entry and Management screen  - <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/da9abfd3-f440-4f0e-8ee2-0c88797607db" />
+
+3. Sales Invoice Creation and Management screen  - <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/68068be0-3751-43bb-a5de-35572738aae5" />
+
+4. Inventory Dashboard with stock levels and reorder alerts  - <img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/75a34185-b692-4164-9aee-64e4f8de813c" />
+
+5. Payment Tracking interface  - <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/2822c226-2ed1-435d-84b2-91caba2322a0" />
+
+6. Expense Logging and Reporting screen - <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/c47b084d-7254-4a5c-a5f3-0a3d03ef1ea3" />
+
 
 ***
