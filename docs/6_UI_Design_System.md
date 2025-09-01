@@ -73,5 +73,6 @@
 
 6. Expense Logging and Reporting screen - <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/c47b084d-7254-4a5c-a5f3-0a3d03ef1ea3" />
 
+7. Login - <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/75a7551d-6bc7-44b1-b829-1263822d86c8" />
 
 ***
